@@ -42,16 +42,36 @@ function App() {
 
   const cards = [
     {
-      "title": "Title",
-      "description": "Description",
-      "gh_link": "https://google.com/",
-      "demo_link": "https://google.com/"
+      screenshot_url: "https://github.com/techdev5521/ywca-greater-lafayette/raw/master/screenshot.png",
+      "title": "Young Women's Christian Association Wesbite Redsign",
+      "description": "Rebranding of Young Women's Christian Association Website of Greater Lafayette",
+      "gh_link": "https://github.com/techdev5521/ywca-greater-lafayette",
     },
     {
-      "title": "Title",
-      "description": "Description",
-      "gh_link": "https://google.com/",
-    }
+      screenshot_url: "https://github.com/techdev5521/getfedora.com/raw/master/screenshot.png",
+      "title": "Swipe Out Starvation",
+      "description": "A simple website made available to the Purdue student body to educate them on Purdue's Swipe Out Starvation program.",
+      "gh_link": "https://github.com/techdev5521/Swipe-Out-Starvation",
+    },
+    {
+      screenshot_url: "https://github.com/techdev5521/Swipe-Out-Starvation/raw/master/screenshot.png",
+      "title": "getfedora.com",
+      "description": "A remake of getfedora.com",
+      "gh_link": "https://github.com/techdev5521/getfedora.com",
+    },
+    {
+      screenshot_url: "",
+      "title": "Photo Gallery Manager",
+      "description": "A simple photo gallery manager allows for user management at the public, category manager and super manager levels with per image, category and user management.",
+      "gh_link": "https://github.com/techdev5521/photo-gallery-manager",
+    },
+    {
+      "screenshot_url": "",
+      "title": "BPA Website Design Team 2014",
+      "description": "A mock trip booking tool allowing for flight purchase, car rental and information on your destination scraped from Wikipedia.",
+      "gh_link": "https://github.com/techdev5521/BPA-Website-Design-Team-2014",
+      "demo_link": ""
+    },
   ];
 
   const theme = webqueueTheme(false);
@@ -100,6 +120,11 @@ function App() {
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image={card.screenshot_url ? card.screenshot_url : "https://source.unsplash.com/random"}
+                    title="Image title"
+                  />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
                       {card.title}
